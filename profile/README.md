@@ -6,7 +6,6 @@
 
   <p>
     <a href="https://zervanor.com"><strong>Website</strong></a> •
-    <a href="https://discord.gg/zervanor"><strong>Discord</strong></a> •
     <a href="https://www.linkedin.com/company/zervanor"><strong>LinkedIn</strong></a> •
     <a href="https://twitter.com/zervanor"><strong>Twitter / X</strong></a> •
     <a href="mailto:info@zervanor.com"><strong>Contact</strong></a>
