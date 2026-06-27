@@ -59,6 +59,30 @@ Uygulamalarınızı, görsel iş akışı motorlarını ve otonom yapay zeka aja
 *   💰 **Sabit Aylık Ücretlendirme**
     Adım veya görev başına sürpriz faturalar yok. Agent barındırma dahil sabit aylık planlarla operasyon maliyetlerinizi öngörülebilir kılın.
 
+---
+
+## 💡 Core Concepts / Temel Kavramlar
+
+### 🤖 What is an Agent? / Agent (Ajan) Nedir?
+
+*   **English:** In Zervanor, an **Agent** is the platform's atomic deployment unit. It is a manifest-defined (`agent.manifest.json`), deployable, and capability-advertising component running as an isolated container workload (managed via Kubernetes in the cloud or via the **Zervanor Desktop App / CLI** locally).
+    *   **Autonomous & Event-Driven:** Declares its triggers, actions, and UI interaction surface in its manifest, and participates in workflows via `CloudEvents`.
+    *   **Secure & Auth-Ready:** Accesses platform APIs using dedicated organization-scoped agent tokens (`zrv_agt_*`).
+    *   **Hybrid AI Runtimes:** Can run inference globally in the cloud or leverage local, on-device LLMs (e.g., Llama 3) via the Desktop runtime outbound streams.
+*   **Türkçe:** Zervanor'da bir **Agent (Ajan)**, platformun bağımsız olarak dağıtılabilen en küçük çalışma zamanı (runtime) birimidir. `agent.manifest.json` dosyasıyla tanımlanan bu birimler, bulutta izole Kubernetes pod'larında ya da yerelde **Zervanor Masaüstü Uygulaması / CLI** aracılığıyla çalışır.
+    *   **Otonom ve Olay-Güdümlü:** Kendi tetikleyicilerini, eylemlerini ve arayüz yeteneklerini manifestiyle beyan eder; akışlara `CloudEvents` standartlarıyla katılır.
+    *   **Güvenli Erişim:** Platform kaynaklarına erişmek için organizasyona özel olarak üretilen güvenli ajan token'larını (`zrv_agt_*`) kullanır.
+    *   **Hibrit Çalışma:** Buluttaki LLM modellerini kullanabileceği gibi, Masaüstü uygulaması üzerinden bilgisayarınızdaki yerel modellerden (on-device LLMs) de yararlanabilir.
+
+### 🔌 What is a Connector? / Connector (Konnektör) Nedir?
+
+*   **English:** A **Connector** is a versioned, schema-validated integration pack built to an atomic-unit standard. Connectors dictate how the platform talks to third-party APIs (like Stripe, Slack, Salesforce, GitHub) and automatically transform raw inbound webhooks into system-wide events.
+    *   **Definition vs. Connection:** A *Connector Pack* defines auth rules (OAuth2, API keys) and request mappings. When connected, it instantiates a runtime *Connector* holding encrypted credentials for that specific organization.
+    *   **Automatic Agent Tooling:** A key architectural advantage is that **every certified Connector automatically projects as a tool for AI Agents**. If your organization has an active Salesforce connector, your AI agent can query leads using it instantly.
+*   **Türkçe:** Bir **Connector (Konnektör)**, harici servislerle (Stripe, Slack, Salesforce, GitHub vb.) entegrasyon kurmayı sağlayan, şema doğrulamalı ve versiyonlanmış entegrasyon paketleridir. Gelen ham webhook verilerini normalize edilmiş sistem olaylarına dönüştürür.
+    *   **Şablon vs. Canlı Bağlantı:** *Connector Pack* kimlik doğrulama kurallarını (OAuth2, API Anahtarları) ve istek şemalarını tanımlar. Bağlantı kurulduğunda ise şifrelenmiş kimlik bilgilerini barındıran canlı bir *Connector* nesnesi oluşur.
+    *   **Ajan Yeteneğine Dönüşüm:** Zervanor mimarisinin en büyük avantajı, **sertifikalı her konnektörün yapay zeka ajanları için otomatik olarak çağrılabilir birer araca (tool) dönüşmesidir**. Aktif bir Salesforce konnektörünüz varsa, yapay zeka ajanınız bunu kullanarak doğrudan veri sorgulayabilir.
+
 <!-- ---
 
 ## 🛠️ The Zervanor Open Source Stack
