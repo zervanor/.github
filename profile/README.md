@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://app.zervanor.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fzervanor-logo.9bf18c90.png" alt="Zervanor Logo" width="100%" style="background-color:#0C0C0D; padding:15px" />
+  <img src="https://app.zervanor.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fzervanor-logo.9bf18c90.png" alt="Zervanor Logo" width="60%" style="background-color:#0C0C0D; padding:15px" />
   
   <h3>Ready-made automations and the AI agents that run them, on one platform.</h3>
   <p><em>Hazır iş operasyonları ve bunları çalıştıran yapay zeka ajanları tek bir platformda.</em></p>
